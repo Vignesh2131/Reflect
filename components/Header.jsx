@@ -8,7 +8,9 @@ import {
 import UserMenu from "./UserMenu";
 import { Button } from "./ui/button";
 import { FolderOpen, PenBox } from "lucide-react";
-const Header = () => {
+import { checkUser } from "@/lib/checkUser";
+const Header = async () => {
+  await checkUser();
   return (
     <div>
       <header className="container mx-auto">
